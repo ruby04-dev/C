@@ -65,3 +65,23 @@ fgets_() / fgets()
 * 문자열은 null문자 '\0' 로 끝난다.
 * 문자열의 길이를 사전에 알 수 없기 때문에, 문자열은 가변길이 메모리에 저장해야한다.
 printf() / scanf(), scanf_s()
+
+
+## 번외 
+vsCode에서 C 언어 debugging 시 터미널 입력 받는 법
+* CodeLLDB extension 설치 [CodeLLDB](https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb)
+* launch.json 에 configuration 추가
+```json
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "(CodeLLDB)Launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "args": [],
+            "cwd": "${fileDirname}"
+        }
+    ]
+}
+```
